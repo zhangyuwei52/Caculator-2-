@@ -15,7 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
     
         // 設置底色
-        self.view.backgroundColor = UIColor.black
+        self.view.backgroundColor = UIColor.white
 
         // 建立 UICollectionViewFlowLayout
         let layout = UICollectionViewFlowLayout()
@@ -31,8 +31,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         layout.itemSize = CGSize(width: CGFloat(fullScreenSize.width), height: CGFloat(fullScreenSize.width)/3 - 10.0)
         
         // 設置 header 及 footer 的尺寸
-        layout.headerReferenceSize = CGSize(width: fullScreenSize.width, height: 40)
-        layout.footerReferenceSize = CGSize(width: fullScreenSize.width, height: 40)
+  /*      layout.headerReferenceSize = CGSize(width: fullScreenSize.width, height: 40)
+        layout.footerReferenceSize = CGSize(width: fullScreenSize.width, height: 40)  */
         
         // 建立 UICollectionView
         let myCollectionView = UICollectionView(frame: CGRect(x: 0, y: 20, width: fullScreenSize.width, height: fullScreenSize.height - 20), collectionViewLayout: layout)
@@ -40,9 +40,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // 註冊 cell 以供後續重複使用
         myCollectionView.register(MyCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         
-        // 註冊 section 的 header 跟 footer 以供後續重複使用
+ /*       // 註冊 section 的 header 跟 footer 以供後續重複使用
         myCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Header")
-        myCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "Footer")
+        myCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "Footer")     */
         
         // 設置委任對象
         myCollectionView.delegate = self
@@ -64,25 +64,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MyCollectionViewCell
         
         // 設置 cell 內容 (即自定義元件裡 增加的圖片與文字元件)
-     /*   cell.imageView.image = UIImage(named: "0\(indexPath.item + 3).jpg")   //
-        cell.titleLabel.text = "0\(indexPath.item + 1)"
-        cell.myTextView.text = "Swift 起步走123456\n7889"   */
+        cell.imageView.image = UIImage(named: "0\(indexPath.item + 3).jpg")   //
+        cell.nameLabel.text = "游戏组 陈又榕"
+     //   cell.myTextView.text = "Swift 起步走123456\n7889"   
         
         return cell
     }
     
     // 有幾個 section
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+ /*   func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
+*/
     // 點選 cell 後執行的動作
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("你選擇了第 \(indexPath.section + 1) 組的")
         print("第 \(indexPath.item + 1) 張圖片")
     }
     
-    // 設置 reuse 的 section 的 header 或 footer
+    
+    
+    
+ /*   // 設置 reuse 的 section 的 header 或 footer
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         // 建立 UICollectionReusableView
         var reusableView = UICollectionReusableView()
@@ -92,7 +95,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         label.textAlignment = .center
         
         // header
-        if kind == UICollectionElementKindSectionHeader {
+      if kind == UICollectionElementKindSectionHeader {
             // 依據前面註冊設置的識別名稱 "Header" 取得目前使用的 header
             reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Header", for: indexPath)
             // 設置 header 的內容
@@ -109,11 +112,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
            label.textColor = UIColor.black
 
         }
-        
+
         reusableView.addSubview(label)
         return reusableView
     }
-
+*/
 }
 
 
