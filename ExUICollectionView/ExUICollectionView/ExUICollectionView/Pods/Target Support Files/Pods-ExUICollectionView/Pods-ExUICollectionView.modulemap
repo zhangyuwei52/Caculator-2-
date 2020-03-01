@@ -1,0 +1,6 @@
+framework module Pods_ExUICollectionView {
+  umbrella header "Pods-ExUICollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}
