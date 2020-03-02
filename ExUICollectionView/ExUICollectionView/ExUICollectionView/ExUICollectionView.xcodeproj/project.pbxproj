@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC6680E240D0F490051504B /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC6680D240D0F490051504B /* 08.jpg */; };
+		0AC66812240D10C60051504B /* 09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC66811240D10C60051504B /* 09.jpg */; };
+		0AC66814240D378B0051504B /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AC66813240D378B0051504B /* 10.jpg */; };
 		699E6516FBFA14F863694C3C /* Pods_ExUICollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37468B7848CC12F0CFB12E5 /* Pods_ExUICollectionView.framework */; };
 		81389E4E1CEF1051002BE16F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81389E4D1CEF1051002BE16F /* AppDelegate.swift */; };
 		81389E501CEF1051002BE16F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81389E4F1CEF1051002BE16F /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AC6680D240D0F490051504B /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
+		0AC66811240D10C60051504B /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.jpg; sourceTree = "<group>"; };
+		0AC66813240D378B0051504B /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		81389E4A1CEF1051002BE16F /* ExUICollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExUICollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81389E4D1CEF1051002BE16F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81389E4F1CEF1051002BE16F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +68,6 @@
 				A38AF19794D0C8F2D428F9A7 /* Pods-ExUICollectionView.debug.xcconfig */,
 				8FF664B140B4C8A7798BC138 /* Pods-ExUICollectionView.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -102,6 +107,9 @@
 		81389E5F1CEF12C3002BE16F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0AC66813240D378B0051504B /* 10.jpg */,
+				0AC66811240D10C60051504B /* 09.jpg */,
+				0AC6680D240D0F490051504B /* 08.jpg */,
 				81389E601CEF12C3002BE16F /* 01.jpg */,
 				81389E611CEF12C3002BE16F /* 02.jpg */,
 				81389E621CEF12C3002BE16F /* 03.jpg */,
@@ -183,11 +191,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC66814240D378B0051504B /* 10.jpg in Resources */,
 				81389E6D1CEF12C3002BE16F /* 07.jpg in Resources */,
 				81389E691CEF12C3002BE16F /* 03.jpg in Resources */,
+				0AC6680E240D0F490051504B /* 08.jpg in Resources */,
 				81389E681CEF12C3002BE16F /* 02.jpg in Resources */,
 				81389E6B1CEF12C3002BE16F /* 05.jpg in Resources */,
 				81389E6C1CEF12C3002BE16F /* 06.jpg in Resources */,
+				0AC66812240D10C60051504B /* 09.jpg in Resources */,
 				81389E581CEF1051002BE16F /* LaunchScreen.storyboard in Resources */,
 				81389E551CEF1051002BE16F /* Assets.xcassets in Resources */,
 				81389E6A1CEF12C3002BE16F /* 04.jpg in Resources */,

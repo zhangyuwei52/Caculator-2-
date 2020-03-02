@@ -17,8 +17,8 @@ class MyCollectionViewCell: UICollectionViewCell {
    // var photoView = UIImageView()
     var snapkitTestView:UIImageView!
     var snapkitTestView2:UIImageView!
-    var horizontalLine:UIImageView!
- ///   var snapkitFirstView:UIImageView!
+    var horizontalLine:UILabel!
+  //  var snapkitFirstView:UIImageView!
   
     
     override init(frame: CGRect) {
@@ -60,13 +60,22 @@ class MyCollectionViewCell: UICollectionViewCell {
        snapkitTestView.backgroundColor = UIColor.white
        self.addSubview(snapkitTestView)
       
-        
-     snapkitTestView2 = UIImageView(frame: CGRect(x: 20+3*w/7, y: h/6, width: 2*w/7-15,
+       snapkitTestView2 = UIImageView(frame: CGRect(x: 20+3*w/7, y: h/6, width: 2*w/7-15,
                                                     height:2*w/7-10 ))
        snapkitTestView2.backgroundColor = UIColor.white
        self.addSubview(snapkitTestView2)
- 
-  /*    snapkitTestView2.backgroundColor = UIColor.white
+        
+/*     horizontalLine.backgroundColor = UIColor.black
+   //    snapkitTestView2 = UIImageView(frame: CGRect(x: 0, y: h/3, width:w-10,height:3 ))
+        snapkitTestView2.snp.makeConstraints { (make) in
+            make.top.equalTo(snapkitTestView2.snp.bottom).offset(20)
+            make.width.equalTo(w-15)
+            make.height.equalTo(5)
+        }
+       self.addSubview(horizontalLine)
+ */
+       
+ /*   snapkitTestView2.backgroundColor = UIColor.black
         snapkitTestView2.snp.makeConstraints { (make) in
         make.top.equalTo(snapkitTestView.snp.top)
         make.bottom.equalTo(snapkitTestView.snp.bottom)
@@ -74,8 +83,8 @@ class MyCollectionViewCell: UICollectionViewCell {
         make.width.equalTo(2*w/7-15)
         }
         self.addSubview(snapkitTestView2)
- */
-        //建立一个水平线
+  */
+     
    /*     horizontalLine.backgroundColor = UIColor.black
         snapkitTestView2 = UIImageView(frame: CGRect(x: 0, y: h/2-15, width:w,
                                                      height:2 ))
@@ -111,26 +120,57 @@ class MyCollectionViewCell: UICollectionViewCell {
 
 class MyNewCollectionViewCell: UICollectionViewCell{
     var imageView:UIImageView!
- /*   var titleLabel:UILabel!
+    var horizontalLine:UILabel!
+    var titleLabel:UILabel!
     var nameLabel:UILabel!
     var myTextView: UITextView!
     // var photoView = UIImageView()
     var snapkitTestView:UIImageView!
     var snapkitTestView2:UIImageView!
-    var horizontalLine:UIImageView!
-  */
+ //   var horizontalLine:UIImageView!
+ 
     override init(frame: CGRect) {
         super.init(frame: frame)
         let w = Double(UIScreen.main.bounds.size.width)
         let h = Double(UIScreen.main.bounds.size.height)
-    
-        imageView = UIImageView(frame: CGRect(x: 15, y:h/2, width: w/7, height: w/7 ))
+        
+        //建立一个很迷的分割线
+ /*       horizontalLine.backgroundColor = UIColor.black
+        horizontalLine = UILabel(frame: CGRect(x: 0, y: h/10-5, width:w-10,height:5 ))
+        self.addSubview(horizontalLine)
+  */
+
+        imageView = UIImageView(frame: CGRect(x: 15, y:h/10, width: w/7, height: w/7 ))
         self.addSubview(imageView)
         imageView.backgroundColor = UIColor.white
-
-    
-
-    
+ 
+        nameLabel = UILabel(frame:CGRect(x: 30+w/7, y: h/10, width: w/3, height: 40 ))
+        nameLabel.textAlignment = .left
+        nameLabel.backgroundColor = UIColor.white
+        nameLabel.textColor = UIColor.black
+        self.addSubview(nameLabel)
+        
+        // 建立一个 UITextView
+        myTextView = UITextView(frame: CGRect(x: 25+w/7, y: 30+h/10, width: 6*w/7-40, height: h/6))
+        myTextView.textColor = UIColor.black
+        myTextView.textAlignment = .left
+        myTextView.font = UIFont(name: "Helvetica-Light", size: 20)
+        self.addSubview(myTextView)
+      
+        
+        snapkitTestView = UIImageView(frame: CGRect(x: 25+w/7, y: h/3-10, width: 2*w/7-15,
+                                                    height:2*w/7-10 ))
+        snapkitTestView.backgroundColor = UIColor.white
+        self.addSubview(snapkitTestView)
+        
+        
+        snapkitTestView2.snp.makeConstraints { (make) in
+            make.height.equalTo(2*w/7-10)
+            make.width.equalTo(2*w/7-15)
+            make.left.equalTo(snapkitTestView.snp.right).offset(5)
+        snapkitTestView2.backgroundColor = UIColor.white
+        self.addSubview(snapkitTestView2)
+        }
     
     
     
